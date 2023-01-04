@@ -1,0 +1,19 @@
+.container {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  /* border: 1px solid red; */
+  grid-template-columns: 80% 20%;
+  justify-content: center;
+}
+
+.Ads {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.upperAds {
+  display: flex;
+  margin-left: 15%;
+  margin-bottom: 10px;
+}

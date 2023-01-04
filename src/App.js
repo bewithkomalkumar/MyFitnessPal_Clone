@@ -1,10 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
+import AddBreakfastAndMeal from "./Components/AddBreakfastAndMeal/AddBreakfastAndMeal";
 
 function App() {
   return (
     <div className="App">
-      <h1>MyFitnesspal </h1>
+      <AddBreakfastAndMeal />
     </div>
   );
 }
