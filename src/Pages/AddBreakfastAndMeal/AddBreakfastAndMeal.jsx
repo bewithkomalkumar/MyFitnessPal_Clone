@@ -1,6 +1,8 @@
 import React from "react";
-import DateSelector from "../DateSelector/DateSelector";
+import DateSelector from "../../Components/DateSelector/DateSelector";
 import AddFoodcss from "./AddBreakfastAndMeal.module.css";
+import TableHeading from "../../Components/TableHeading/TableHeading";
+import BreakFast from "../../Components/BreakFast/BreakFast";
 function AddBreakfastAndMeal() {
   return (
     <div>
@@ -15,7 +17,10 @@ function AddBreakfastAndMeal() {
         <div>
           {/* my Components here */}
           <DateSelector />
+
           <hr />
+          <TableHeading />
+          <BreakFast />
         </div>
         <div className={AddFoodcss.Ads}>
           <img

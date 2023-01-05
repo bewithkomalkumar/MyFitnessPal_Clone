@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import AddBreakfastAndMeal from "./Components/AddBreakfastAndMeal/AddBreakfastAndMeal";
+import AddBreakfastAndMeal from "./Pages/AddBreakfastAndMeal/AddBreakfastAndMeal";
 
 function App() {
   return (

@@ -87,7 +87,7 @@ function DateSelector() {
       <p>Your Food Diary For: </p>
       <div>
         <p className={Datecss.larrow}>&larr;</p>
-        <p>
+        <p className={Datecss.maindate}>
           {day}, {month} {date}, {year}
         </p>
         <p className={Datecss.rarrow}>&rarr;</p>

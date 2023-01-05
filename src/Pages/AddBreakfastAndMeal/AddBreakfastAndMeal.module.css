@@ -17,3 +17,19 @@
   margin-left: 15%;
   margin-bottom: 10px;
 }
+table {
+  display: flex;
+  justify-content: flex-end;
+}
+th {
+  /* border: 1px solid black; */
+
+  background-color: #00548f;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+th > span {
+  color: #aec9db;
+}

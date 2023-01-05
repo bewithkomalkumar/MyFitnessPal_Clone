@@ -28,7 +28,7 @@ input[type="date"] {
 .Date > p {
   color: #0b5680;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
 }
 .Date > div {
   display: flex;
@@ -39,10 +39,15 @@ input[type="date"] {
   color: white;
   padding: 10px;
   font-weight: 700;
+  font-size: 14px;
 }
 .larrow {
   border-radius: 10px 0 0 10px;
 }
 .rarrow {
   border-radius: 0 10px 10px 0;
+}
+.maindate {
+  text-align: center;
+  width: 200px;
 }
