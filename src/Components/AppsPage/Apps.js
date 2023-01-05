@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel1 from './Carousel1';
 import style1 from "./Apps.module.css"
-
+import { NavLink} from "react-router-dom";
 let sData = [
 
     {
@@ -340,35 +340,35 @@ let featuredApps = [
         getUrl: "http://connect.garmin.com/mfp"
     },
     {
-        id: 3,
+        id: 39,
         image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_389_1_10_0_31181.png",
         title: "VeSync",
         category: "",
         getUrl: "https://www.myfitnesspal.com/apps?page=3"
     },
     {
-        id: 4,
+        id: 40,
         image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_392_1_10_0_97000.png",
         title: "Renpho Health",
         category: "",
         getUrl: "https://www.myfitnesspal.com/apps?page=3"
     },
     {
-        id: 5,
+        id: 8,
         image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_229_1_10_0_84885.png",
         title: "Strava",
         category: "Fitness Apps",
         getUrl: "http://strava.com/"
     },
     {
-        id: 6,
+        id: 4,
         image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_180_1_10_0_3668.png",
         title: "MapMyRun",
         category: "Fitness Apps",
         getUrl: "http://www.mapmyrun.com/app/"
     },
     {
-        id: 7,
+        id: 9,
         image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_102_1_10_0_44251.png",
         title: "RunKeeper",
         category: "Fitness Apps",
@@ -385,12 +385,71 @@ const Apps = () => {
                         <div className={style1.carousel}>
                             <Carousel1 />
                         </div>
+
+                        {/* Featured Apps */}
+                        <div className={style1.featuredApps}>
+                            <p id={style1.head1}>Featured Apps</p>
+                            <hr style={{ color: "grey" }} />
+                            <div className={style1.appList1}>
+                                {
+                                    featuredApps.map((item, id) => {
+                                        return (
+                                            <SingleApp app={item} />
+                                        );
+                                    })
+                                }
+                            </div>
+                        </div>
+
+                        {/* App MarketPlace */}
+                        <div className={style1.featuredApps}>
+                            <p id={style1.head1}>App Marketplace</p>
+                            <hr style={{ color: "grey" }} />
+                            <div className={style1.appList1}>
+                                {
+                                    sData.map((item, id) => {
+                                        if ((id + 1) <= 15) {
+                                            return (
+                                                <SingleApp key={id} app={item} />
+                                            );
+                                        }
+                                        else {
+                                            return " ";
+                                        }
+                                    })
+                                }
+                            </div>
+                        </div>
+
                     </div>
                     <div className={style1.apps3}></div>
                 </div>
             </div>
         </>
     )
+}
+
+
+function SingleApp({app}) {
+    
+    return (
+        <>
+            <div className={style1.single1}>
+                <div className={style1.sig1}>
+                    <NavLink id={style1.link} to={`apps/${app.id}`}>
+                        <img src={app.image} width="90%" alt="icon" />
+                    </NavLink>
+                </div>
+                <div className={style1.sig2}>
+                    <NavLink id={style1.link}>
+                        <p id={style1.title}> {app.title}</p>
+                        <p id={style1.category}>{ app.category}</p>
+                    </NavLink>
+                    <a href={app.getUrl} target="_blank" rel="noreferrer"><button id={style1.get}>Get</button></a>
+                </div>
+            </div>
+        </>
+    );
 }
 
 export default Apps;
