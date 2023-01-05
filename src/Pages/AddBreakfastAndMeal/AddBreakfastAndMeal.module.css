@@ -18,10 +18,14 @@
   margin-bottom: 10px;
 }
 table {
+  position: relative;
+  float: right;
   display: flex;
+  width: 380px;
   justify-content: flex-end;
 }
-th {
+th,
+td {
   /* border: 1px solid black; */
 
   background-color: #00548f;
@@ -32,4 +36,10 @@ th {
 }
 th > span {
   color: #aec9db;
+}
+.line {
+  width: 100%;
+  background-color: #bacfdd;
+  height: 1px;
+  margin-bottom: -20px;
 }

@@ -1,9 +1,18 @@
 import React from "react";
-
-function BreakFast() {
+import { Link } from "react-router-dom";
+import tablecss from "./BreakFast.module.css";
+import ItemRows from "../ItemRows/ItemRows";
+function BreakFast(props) {
   return (
-    <div>
-      <h3>Breakfast</h3>
+    <div className={tablecss.box}>
+      <h2>{props.name}</h2>
+      <div>
+        <div>
+          <Link>Add Food</Link> | <Link>Quick Tools</Link>
+        </div>
+        {/* maping my item rows here */}
+        <ItemRows />
+      </div>
     </div>
   );
 }

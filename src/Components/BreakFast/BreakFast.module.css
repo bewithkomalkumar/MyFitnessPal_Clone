@@ -1,0 +1,30 @@
+.tablerow {
+  width: 380px;
+  position: relative;
+  float: right;
+  /* border: 1px solid red; */
+  display: flex;
+  top: -40px;
+
+  justify-content: space-around;
+}
+.tablerow > p {
+  margin-bottom: -10px;
+}
+.box {
+  margin-bottom: -10px;
+}
+.box a {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #0088d6;
+  font-weight: 600;
+  font-size: 14px;
+}
+.box h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #0b5680;
+  font-size: 20px;
+}

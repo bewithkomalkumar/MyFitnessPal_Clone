@@ -17,10 +17,11 @@ function AddBreakfastAndMeal() {
         <div>
           {/* my Components here */}
           <DateSelector />
-
           <hr />
           <TableHeading />
-          <BreakFast />
+          <BreakFast name={"Breakfast"} />
+          <p className={AddFoodcss.line}></p>
+          <BreakFast name={"Lunch"} />
         </div>
         <div className={AddFoodcss.Ads}>
           <img
