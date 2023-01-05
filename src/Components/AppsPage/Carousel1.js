@@ -53,11 +53,8 @@ function Item(props) {
     return (
         <>
             <Paper>
-                <img src={props.item.image} width="400px" height="300px" alt="pic" />
+                <img src={props.item.image} width="100%" height="300px" alt="pic" />
             </Paper>
-            <Button className="CheckButton">
-                Check it out!
-            </Button>
         </>
     )
 }

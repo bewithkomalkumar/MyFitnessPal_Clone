@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel1 from './Carousel1';
+import style1 from "./Apps.module.css"
 
 let sData = [
 
@@ -323,11 +324,72 @@ let sData = [
     }
 ];
 
+let featuredApps = [
+    {
+        id: 1,
+        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_30_1_10_0_45741.png",
+        title: "Fitbit",
+        category: "Activity Trackers",
+        getUrl: "http://www.myfitnesspal.com/fitbit/authorize"
+    },
+    {
+        id: 2,
+        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_120_1_10_0_9523.png",
+        title: "Garmin Connect",
+        category: "Activity Trackers",
+        getUrl: "http://connect.garmin.com/mfp"
+    },
+    {
+        id: 3,
+        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_389_1_10_0_31181.png",
+        title: "VeSync",
+        category: "",
+        getUrl: "https://www.myfitnesspal.com/apps?page=3"
+    },
+    {
+        id: 4,
+        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_392_1_10_0_97000.png",
+        title: "Renpho Health",
+        category: "",
+        getUrl: "https://www.myfitnesspal.com/apps?page=3"
+    },
+    {
+        id: 5,
+        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_229_1_10_0_84885.png",
+        title: "Strava",
+        category: "Fitness Apps",
+        getUrl: "http://strava.com/"
+    },
+    {
+        id: 6,
+        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_180_1_10_0_3668.png",
+        title: "MapMyRun",
+        category: "Fitness Apps",
+        getUrl: "http://www.mapmyrun.com/app/"
+    },
+    {
+        id: 7,
+        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_102_1_10_0_44251.png",
+        title: "RunKeeper",
+        category: "Fitness Apps",
+        getUrl: "http://runkeeper.com/running-app?appsFlyerMediaSource=&appsFlyerCampaign="
+    },
+];
+
 const Apps = () => {
     return (
-        <div>
-            <Carousel1 />
-        </div>
+        <>
+            <div className={style1.apps0}>
+                <div className={style1.apps1}>
+                    <div className={style1.apps2}>
+                        <div className={style1.carousel}>
+                            <Carousel1 />
+                        </div>
+                    </div>
+                    <div className={style1.apps3}></div>
+                </div>
+            </div>
+        </>
     )
 }
 

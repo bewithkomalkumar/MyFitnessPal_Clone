@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+.apps0{
+    display: block;
+    background-color: black;
+    width: 70%;
+    margin: auto;
+}
+.apps1{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    border: 2px solid red;
+    height: 500px;
+}
+
+.apps2{
+border: 2px dotted greed;
+height: 500px;
+background-color: white;
+/* width: 100%; */
+}
+.apps3{
+    border: 2px dotted teal;
+    height: 500px;
+    background-color: blue;
+    /* width: 100%; */
+}
+
+.carousel{
+    display: block;
+    width: 80%;
+    margin: auto;
+    border: 2px solid rebeccapurple;
+    margin-top: 20px;
+}
