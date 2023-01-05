@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState} from 'react';
 import Carousel1 from './Carousel1';
-import style1 from "./Apps.module.css"
-import { NavLink} from "react-router-dom";
+import style1 from "./Apps.module.css";
+import { NavLink } from "react-router-dom";
+import PaginationS from './PaginationS';
+import { useParams} from "react-router-dom";
+import SavedSearchIcon from '@mui/icons-material/SavedSearch';
+
+
 let sData = [
 
     {
@@ -376,7 +381,23 @@ let featuredApps = [
     },
 ];
 
-const Apps = () => {
+const Apps = ({ pageNum }) => {
+    const [search, setSearch] = useState({
+        text : "",
+    });
+    let { id } = useParams();
+    // console.log(id);
+    let end = (Number(id) * 15);
+    let start = end - 14;
+    // console.log(start + " -"+ end);
+
+    // onChange
+    const change = (e) => {
+        setSearch({ ...search, [e.target.name]: e.target.value });
+    }
+    // console.log(search)
+
+
     return (
         <>
             <div className={style1.apps0}>
@@ -394,7 +415,7 @@ const Apps = () => {
                                 {
                                     featuredApps.map((item, id) => {
                                         return (
-                                            <SingleApp app={item} />
+                                            <SingleApp key={id} app={item} />
                                         );
                                     })
                                 }
@@ -408,7 +429,7 @@ const Apps = () => {
                             <div className={style1.appList1}>
                                 {
                                     sData.map((item, id) => {
-                                        if ((id + 1) <= 15) {
+                                        if (start <= (item.id) && (item.id) <=end) {
                                             return (
                                                 <SingleApp key={id} app={item} />
                                             );
@@ -422,7 +443,32 @@ const Apps = () => {
                         </div>
 
                     </div>
-                    <div className={style1.apps3}></div>
+
+                    {/* side bar filter */}
+                    <div className={style1.apps3}>
+                        {/* search input */}
+                        <div>
+                            <SavedSearchIcon id={style1.searchIcon} />
+                            <input id={style1.inp1} placeholder="Search..." value={search.text} name="text" onChange={change} />
+                        </div>
+                        {/* search category */}
+                        <div className={style1.headcl}><span id={style1.headText}>Category</span></div>
+                        <div className={style1.subTxt}>
+                            <span id={style1.catText}>All</span>
+                            <span id={style1.catText}>Activity Trackers</span>
+                            <span id={style1.catText}>Step Trackers</span>
+                            <span id={style1.catText}>Scales</span>
+                            <span id={style1.catText}>Lifestyle</span>
+                            <span id={style1.catText}>Wearables</span>
+                            <span id={style1.catText}>Fitness Apps</span>
+                            <span id={style1.catText}>Exercise Equipments</span>
+                            <span id={style1.catText}>Fertility</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div className={style1.pagination}>
+                    <PaginationS appsArray={sData} />
                 </div>
             </div>
         </>
@@ -431,7 +477,7 @@ const Apps = () => {
 
 
 function SingleApp({app}) {
-    
+
     return (
         <>
             <div className={style1.single1}>

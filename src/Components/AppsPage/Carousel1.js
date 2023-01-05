@@ -26,7 +26,7 @@ const Carousel1 = (props) => {
                 }}
                 activeIndicatorIconButtonProps={{
                     style: {
-                        backgroundColor: 'red',
+                        backgroundColor: 'black',
                         color: "white"
                     }
                 }}
@@ -49,7 +49,7 @@ const Carousel1 = (props) => {
 }
 
 function Item(props) {
-    console.log(props);
+    // console.log(props);
     return (
         <>
             <Paper>

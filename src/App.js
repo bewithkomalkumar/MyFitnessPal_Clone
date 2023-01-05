@@ -1,12 +1,12 @@
 import logo from "./logo.svg";
-import Apps from "./Components/AppsPage/Apps";
 import "./App.css";
+import AppsPagesRouting from "./Components/AppsPage/AppsPagesRouting";
 
 function App() {
   return (
     <div className="App">
       <h1>MyFitnesspal </h1>
-      <Apps />
+      <AppsPagesRouting />
     </div>
   );
 }
