@@ -389,6 +389,7 @@ const Apps = ({ pageNum }) => {
         marketPlace: sData,
         featured: featuredApps
     });
+    const [count, setCount] = useState(0);
     let { id } = useParams();
     // console.log(id);
     let end = (Number(id) * 15);
@@ -432,7 +433,6 @@ const Apps = ({ pageNum }) => {
     // onChange
     const change = (e) => {
         setSearch({ ...search, [e.target.name]: e.target.value });
-
         sData.map((item,id) => {
             if (item.title.toLowerCase().indexOf(search.text.toLowerCase()) !== -1) {
                 typingArrayM.push(item);
@@ -446,8 +446,12 @@ const Apps = ({ pageNum }) => {
             return "";
         });
         setFilterAr({ ...filterAr, marketPlace: typingArrayM, featured: typingArrayF });
-        console.log(search)
+        // console.log(search)
     }
+
+    useEffect(() => {
+        setCount(count => count + 1);
+    },[count])
     // console.log(search)
 
 
