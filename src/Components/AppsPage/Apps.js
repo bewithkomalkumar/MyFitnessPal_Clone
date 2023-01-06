@@ -385,6 +385,7 @@ const Apps = ({ pageNum }) => {
     const [search, setSearch] = useState({
         text : "",
     });
+    const [filterAr, setFilterAr] = useState(sData);
     let { id } = useParams();
     // console.log(id);
     let end = (Number(id) * 15);
@@ -397,6 +398,24 @@ const Apps = ({ pageNum }) => {
     }
     // console.log(search)
 
+    // filter
+    const sideBar = ["All", "Activity Trackers", "Step Trackers", "Scales", "Lifestyle", "Wearables", "Fitness Apps", "Exercise Equipments", "Fertility"];
+    const filteredArray = [];
+
+    const filter1 = (props) => {
+        sData.filter((item, id) => {
+            if (props.toLowerCase() === item.category.toLowerCase()) {
+                filteredArray.push(item);
+            }
+            if (props.toLowerCase() === "all") {
+                filteredArray.push(item);
+            }
+            return "";
+        })
+        setFilterAr(filteredArray);
+        // alert(props);
+    }
+    console.log(filterAr);
 
     return (
         <>
@@ -428,7 +447,7 @@ const Apps = ({ pageNum }) => {
                             <hr style={{ color: "grey" }} />
                             <div className={style1.appList1}>
                                 {
-                                    sData.map((item, id) => {
+                                    filterAr.map((item, id) => {
                                         if (start <= (item.id) && (item.id) <=end) {
                                             return (
                                                 <SingleApp key={id} app={item} />
@@ -454,21 +473,15 @@ const Apps = ({ pageNum }) => {
                         {/* search category */}
                         <div className={style1.headcl}><span id={style1.headText}>Category</span></div>
                         <div className={style1.subTxt}>
-                            <span id={style1.catText}>All</span>
-                            <span id={style1.catText}>Activity Trackers</span>
-                            <span id={style1.catText}>Step Trackers</span>
-                            <span id={style1.catText}>Scales</span>
-                            <span id={style1.catText}>Lifestyle</span>
-                            <span id={style1.catText}>Wearables</span>
-                            <span id={style1.catText}>Fitness Apps</span>
-                            <span id={style1.catText}>Exercise Equipments</span>
-                            <span id={style1.catText}>Fertility</span>
+                            {sideBar.map((item, id) => {
+                                return (<span key={id} id={style1.catText} onClick={() => filter1(item)}>{item}</span>);
+                            })}
                         </div>
                     </div>
 
                 </div>
                 <div className={style1.pagination}>
-                    <PaginationS appsArray={sData} />
+                    <PaginationS appsArray={filterAr} />
                 </div>
             </div>
         </>

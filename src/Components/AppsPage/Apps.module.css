@@ -115,7 +115,7 @@ overflow: auto;
 .appList1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px 5px;
+    gap: 20px 10px;
     padding: 5px;
 }
 
