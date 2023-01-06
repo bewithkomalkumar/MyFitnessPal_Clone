@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import style1 from "./Apps.module.css";
 import SavedSearchIcon from '@mui/icons-material/SavedSearch';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import Carousel2 from './Carousel2';
 import { borderRadius } from '@mui/system';
 
@@ -356,7 +356,7 @@ const AppsDetail = () => {
                     <div className={style1.apps2}>
 
                         <div className={style1.detail1}>
-                            <span id={style1.dt1}>App Gallery</span>
+                            <span ><NavLink to="/apps/page/1" id={style1.dt1}>App Gallery</NavLink></span>
                             <span id={style1.dt2}><KeyboardDoubleArrowRightIcon /></span>
                             <span id={style1.dt3}>{obj[0].title}</span>
                         </div>
@@ -371,9 +371,9 @@ const AppsDetail = () => {
                                 </div>
                             </div>
                             <div className={style1.detail4}>
-                                <button id={style1.dt6}>CONNECT</button>
+                                <p><a href={obj[0].getUrl} id={style1.dt6}>CONNECT</a></p>
                                 <br/>
-                                <button id={style1.dt7}>BUY</button>
+                                <p ><a href={obj[0].getUrl} id={style1.dt7}>BUY</a></p>
                             </div>
                         </div>
 
@@ -403,28 +403,6 @@ const AppsDetail = () => {
                                 iPhone is a registered trademark of Apple Inc. App Store is a service mark of Apple Inc.
                             </p>
                         </div>
-
-                        {/* <div className={style1.carousel}>
-                            <h2>hhh</h2>
-                        </div> */}
-
-                        {/* Featured Apps */}
-                        {/* <div className={style1.featuredApps}>
-                            <p id={style1.head1}>Featured Apps</p>
-                            <hr style={{ color: "grey" }} />
-                            <div className={style1.appList1}>
-                                <h2>zzzzz</h2>
-                            </div>
-                        </div> */}
-
-                        {/* App MarketPlace */}
-                        {/* <div className={style1.featuredApps}>
-                            <p id={style1.head1}>App Marketplace</p>
-                            <hr style={{ color: "grey" }} />
-                            <div className={style1.appList1}>
-                                <h2>csdcd</h2>
-                            </div>
-                        </div> */}
 
                     </div>
 
