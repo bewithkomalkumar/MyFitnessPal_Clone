@@ -25,7 +25,8 @@ background-color: white;
 .apps3{
     display: block;
     /* border: 2px dotted teal; */
-    height: 600px;
+    /* height: 600px; */
+    height: fit-content;
     padding: 15px;
     /* text-align: center; */
 }
@@ -176,6 +177,99 @@ font-weight: 600;
     text-decoration: none;
 }
 
+
+/* detail page */
+
+.detail1{
+margin-bottom: 40px;
+}
+
+#dt1{
+font-size: 16px;
+color: blue;
+}
+#dt2{
+    position:absolute;
+    color: rgb(0, 0, 0);
+    margin-left: 4px;
+}
+#dt3{
+margin-left: 30px;
+}
+
+.detail2{
+display: flex;
+justify-content:space-between;
+width: 80%;
+}
+
+#dt4{
+    margin-top: -1px;
+    font-size: 22px;
+    font-weight: 700;
+    color: darkcyan;
+}
+
+#dt5{
+    font-size: 14px;
+    color: grey;
+    margin-top: -5px;
+}
+
+.detail3{
+display: flex;
+justify-content: space-between;
+}
+
+.detail3i{
+    margin-right: 20px;
+}
+
+.detail4{
+display: block;
+}
+
+#dt6{
+font-size: 18px;
+padding: 13px 25px;
+background-color: rgb(14, 116, 156);
+color: white;
+border: none;
+margin-bottom: 15px;
+cursor: pointer;
+}
+
+#dt7{
+font-size: 18px;
+padding: 12px 50px;
+background-color: rgb(182, 182, 182);
+color: rgb(0, 0, 0);
+border: 1px solid gray;
+margin-bottom: 15px;
+cursor: pointer;
+font-weight: 600;
+}
+
+#dt6:hover,#dt7:hover{
+    border-left: 15px solid dodgerblue;
+}
+
+#dt8{
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: grey;
+}
+
+#dt9{
+    margin-top: 50px;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+}
+
+.detail{
+
+}
 
 
 

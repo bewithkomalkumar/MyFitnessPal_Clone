@@ -1,10 +1,11 @@
-import React, { useState, useEffect} from 'react';
-import Carousel1 from './Carousel1';
+import React, { useState} from 'react';
 import style1 from "./Apps.module.css";
-import { NavLink } from "react-router-dom";
-import PaginationS from './PaginationS';
-import { useParams} from "react-router-dom";
 import SavedSearchIcon from '@mui/icons-material/SavedSearch';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import { useParams } from 'react-router-dom';
+import Carousel2 from './Carousel2';
+import { borderRadius } from '@mui/system';
+
 
 
 let sData = [
@@ -329,175 +330,101 @@ let sData = [
     }
 ];
 
-let featuredApps = [
-    {
-        id: 1,
-        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_30_1_10_0_45741.png",
-        title: "Fitbit",
-        category: "Activity Trackers",
-        getUrl: "http://www.myfitnesspal.com/fitbit/authorize"
-    },
-    {
-        id: 2,
-        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_120_1_10_0_9523.png",
-        title: "Garmin Connect",
-        category: "Activity Trackers",
-        getUrl: "http://connect.garmin.com/mfp"
-    },
-    {
-        id: 39,
-        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_389_1_10_0_31181.png",
-        title: "VeSync",
-        category: "",
-        getUrl: "https://www.myfitnesspal.com/apps?page=3"
-    },
-    {
-        id: 40,
-        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_392_1_10_0_97000.png",
-        title: "Renpho Health",
-        category: "",
-        getUrl: "https://www.myfitnesspal.com/apps?page=3"
-    },
-    {
-        id: 8,
-        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_229_1_10_0_84885.png",
-        title: "Strava",
-        category: "Fitness Apps",
-        getUrl: "http://strava.com/"
-    },
-    {
-        id: 4,
-        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_180_1_10_0_3668.png",
-        title: "MapMyRun",
-        category: "Fitness Apps",
-        getUrl: "http://www.mapmyrun.com/app/"
-    },
-    {
-        id: 9,
-        image: "https://dakd0cjsv8wfa.cloudfront.net/images/api_clients/0/api_clients_102_1_10_0_44251.png",
-        title: "RunKeeper",
-        category: "Fitness Apps",
-        getUrl: "http://runkeeper.com/running-app?appsFlyerMediaSource=&appsFlyerCampaign="
-    },
-];
 
-const Apps = ({ pageNum }) => {
+
+
+const AppsDetail = () => {
     const [search, setSearch] = useState({
-        text : "",
+        text: "",
     });
-    const [filterAr, setFilterAr] = useState({
-        marketPlace: sData,
-        featured: featuredApps
-    });
-    let { id } = useParams();
-    // console.log(id);
-    let end = (Number(id) * 15);
-    let start = end - 14;
-    // console.log(start + " -"+ end);
 
+    const { id } = useParams();
+    // console.log(id)
 
-    // filter
-    const sideBar = ["All", "Activity Trackers", "Step Trackers", "Scales", "Lifestyle", "Wearables", "Fitness Apps", "Exercise Equipments", "Fertility"];
-    const filteredArray = [];
-    const featuredArray = [];
-    const typingArrayF = [];
-    const typingArrayM = [];
-
-
-    const filter1 = (props) => {
-        sData.filter((item, id) => {
-            if (props.toLowerCase() === item.category.toLowerCase()) {
-                filteredArray.push(item);
-            }
-            if (props.toLowerCase() === "all") {
-                filteredArray.push(item);
-            }
-            return "0";
-        })
-        featuredApps.filter((item, id) => {
-        if (props.toLowerCase() === item.category.toLowerCase()) {
-            featuredArray.push(item);
-        }
-        if (props.toLowerCase() === "all") {
-            featuredArray.push(item);
-        }
-        return "";
-        })
-        setFilterAr({ ...filterAr, marketPlace: filteredArray, featured: featuredArray });
-        // alert(props);
-    }
-    // console.log(filterAr);
-
-
-    // onChange
     const change = (e) => {
         setSearch({ ...search, [e.target.name]: e.target.value });
-        sData.map((item,id) => {
-            if (item.title.toLowerCase().indexOf(search.text.toLowerCase()) !== -1) {
-                typingArrayM.push(item);
-            }
-            return "";
-        });
-        featuredApps.map((item, id) => {
-            if (item.title.toLowerCase().indexOf(search.text.toLowerCase()) !== -1) {
-                typingArrayF.push(item);
-            }
-            return "";
-        });
-        setFilterAr({ ...filterAr, marketPlace: typingArrayM, featured: typingArrayF });
-        // console.log(search)
+        prompt("To search any text on this page do", "ctrl+F");
     }
 
-    // console.log(search)
-
+    const obj = sData.filter((item) => item.id === Number(id));
+    // console.log(obj[0]);
 
     return (
         <>
             <div className={style1.apps0}>
                 <div className={style1.apps1}>
                     <div className={style1.apps2}>
-                        <div className={style1.carousel}>
-                            <Carousel1 />
+
+                        <div className={style1.detail1}>
+                            <span id={style1.dt1}>App Gallery</span>
+                            <span id={style1.dt2}><KeyboardDoubleArrowRightIcon /></span>
+                            <span id={style1.dt3}>{obj[0].title}</span>
                         </div>
 
+                        <div className={style1.detail2}>
+                            <div className={style1.detail3}>
+                                <div className={style1.detail3i}><img src={obj[0].image} alt={obj[0].title} width="150px" height="150px" />
+                                </div>
+                                <div>
+                                    <p id={style1.dt4}>{obj[0].title}</p>
+                                    <p id={style1.dt5}>{obj[0].category }</p>
+                                </div>
+                            </div>
+                            <div className={style1.detail4}>
+                                <button id={style1.dt6}>CONNECT</button>
+                                <br/>
+                                <button id={style1.dt7}>BUY</button>
+                            </div>
+                        </div>
+
+                        {/* carousel2 */}
+                        <div style={{
+                            width: "90%", margin: "auto", marginTop: "30px",
+                            borderRadius: "10px", overflow: "hidden",
+                            padding:"5px 10px"
+                        }}>
+                            <Carousel2 />
+                        </div>
+
+                        {/* text */}
+                        <div>
+                            <p id={style1.dt8}>
+                                Track your steps, distance, calories burned, active minutes, stairs climbed, and sleep with Fitbit devices. Your stats upload wirelessly via computer or select mobile devices, so you can see progress toward your goals. Stay motivated by earning badges or connecting with friends for support or friendly competitions. Log food, workouts and more.
+                                <br /><br />
+                                By connecting your Fitbit Tracker to your MyFitnessPal account, all of the data tracked by your Fitbit will be synchronized with your MyFitnessPal account. Your daily calorie goal will automatically be adjusted to take into account your activity level as measured by your Fitbit.<br /><br />
+
+                                **Works with all Fitbit Trackers*
+
+                            </p>
+                        </div>
+
+                        <div>
+                            <p id={style1.dt9}>
+                                iPhone is a registered trademark of Apple Inc. App Store is a service mark of Apple Inc.
+                            </p>
+                        </div>
+
+                        {/* <div className={style1.carousel}>
+                            <h2>hhh</h2>
+                        </div> */}
+
                         {/* Featured Apps */}
-                        <div className={style1.featuredApps}>
+                        {/* <div className={style1.featuredApps}>
                             <p id={style1.head1}>Featured Apps</p>
                             <hr style={{ color: "grey" }} />
                             <div className={style1.appList1}>
-                                {
-                                    filterAr.featured.map((item, id) => {
-                                        return (
-                                            <SingleApp key={id} app={item} />
-                                        );
-                                    })
-                                }
+                                <h2>zzzzz</h2>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* App MarketPlace */}
-                        <div className={style1.featuredApps}>
+                        {/* <div className={style1.featuredApps}>
                             <p id={style1.head1}>App Marketplace</p>
                             <hr style={{ color: "grey" }} />
                             <div className={style1.appList1}>
-                                {
-                                    filterAr.marketPlace.map((item, id) => {
-                                        if (filterAr.marketPlace.length >15) {
-                                            if (start <= (item.id) && (item.id) <= end) {
-                                                return (
-                                                    <SingleApp key={id} app={item} />
-                                                );
-                                            }
-                                            else {
-                                                return " ";
-                                            }
-                                        } else {
-                                            return (<SingleApp key={id} app={item} />);
-                                        }
-                                    })
-                                }
+                                <h2>csdcd</h2>
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
 
@@ -508,45 +435,12 @@ const Apps = ({ pageNum }) => {
                             <SavedSearchIcon id={style1.searchIcon} />
                             <input id={style1.inp1} placeholder="Search..." value={search.text} name="text" onChange={change} />
                         </div>
-                        {/* search category */}
-                        <div className={style1.headcl}><span id={style1.headText}>Category</span></div>
-                        <div className={style1.subTxt}>
-                            {sideBar.map((item, id) => {
-                                return (<span key={id} className={item} id={style1.catText} onClick={() => filter1(item)}>{item}</span>);
-                            })}
-                        </div>
                     </div>
 
-                </div>
-                <div className={style1.pagination}>
-                    <PaginationS appsArray={filterAr.marketPlace} />
                 </div>
             </div>
         </>
     )
 }
 
-
-function SingleApp({app}) {
-
-    return (
-        <>
-            <div className={style1.single1}>
-                <div className={style1.sig1}>
-                    <NavLink id={style1.link} to={`/apps/${app.id}`}>
-                        <img src={app.image} width="90%" alt="icon" />
-                    </NavLink>
-                </div>
-                <div className={style1.sig2}>
-                    <NavLink id={style1.link} to={`/apps/${app.id}`}>
-                        <p id={style1.title}> {app.title}</p>
-                        <p id={style1.category}>{ app.category}</p>
-                    </NavLink>
-                    <a href={app.getUrl} target="_blank" rel="noreferrer"><button id={style1.get}>Get</button></a>
-                </div>
-            </div>
-        </>
-    );
-}
-
-export default Apps;
+export default AppsDetail;
