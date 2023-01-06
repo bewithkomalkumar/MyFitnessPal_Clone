@@ -426,7 +426,7 @@ const Apps = ({ pageNum }) => {
         setFilterAr({ ...filterAr, marketPlace: filteredArray, featured: featuredArray });
         // alert(props);
     }
-    console.log(filterAr);
+    // console.log(filterAr);
 
     // onChange
     const change = (e) => {
@@ -511,7 +511,7 @@ const Apps = ({ pageNum }) => {
                         <div className={style1.headcl}><span id={style1.headText}>Category</span></div>
                         <div className={style1.subTxt}>
                             {sideBar.map((item, id) => {
-                                return (<span key={id} id={style1.catText} onClick={() => filter1(item)}>{item}</span>);
+                                return (<span key={id} className={item} id={style1.catText} onClick={() => filter1(item)}>{item}</span>);
                             })}
                         </div>
                     </div>
