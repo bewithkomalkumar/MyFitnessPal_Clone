@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import Carousel1 from './Carousel1';
 import style1 from "./Apps.module.css";
 import { NavLink } from "react-router-dom";
@@ -427,6 +427,7 @@ const Apps = ({ pageNum }) => {
         // alert(props);
     }
     // console.log(filterAr);
+
 
     // onChange
     const change = (e) => {
