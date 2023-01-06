@@ -5,7 +5,7 @@ import { NavLink, useParams } from 'react-router-dom';
 const PaginationS = ({ appsArray }) => {
     const { id } = useParams();
     // console.log(id);
-    let totalNum = Math.round(appsArray.length/15);
+    let totalNum = Math.ceil(appsArray.length/15);
     // console.log(totalNum);
     let pages = [];
     for (let x = 1; x <= totalNum; x++) {

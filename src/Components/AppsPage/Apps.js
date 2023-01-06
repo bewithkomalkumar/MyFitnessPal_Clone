@@ -385,7 +385,10 @@ const Apps = ({ pageNum }) => {
     const [search, setSearch] = useState({
         text : "",
     });
-    const [filterAr, setFilterAr] = useState(sData);
+    const [filterAr, setFilterAr] = useState({
+        marketPlace: sData,
+        featured: featuredApps
+    });
     let { id } = useParams();
     // console.log(id);
     let end = (Number(id) * 15);
@@ -401,6 +404,8 @@ const Apps = ({ pageNum }) => {
     // filter
     const sideBar = ["All", "Activity Trackers", "Step Trackers", "Scales", "Lifestyle", "Wearables", "Fitness Apps", "Exercise Equipments", "Fertility"];
     const filteredArray = [];
+    const featuredArray = [];
+
 
     const filter1 = (props) => {
         sData.filter((item, id) => {
@@ -410,9 +415,18 @@ const Apps = ({ pageNum }) => {
             if (props.toLowerCase() === "all") {
                 filteredArray.push(item);
             }
-            return "";
+            return "0";
         })
-        setFilterAr(filteredArray);
+        featuredApps.filter((item, id) => {
+        if (props.toLowerCase() === item.category.toLowerCase()) {
+            featuredArray.push(item);
+        }
+        if (props.toLowerCase() === "all") {
+            featuredArray.push(item);
+        }
+        return "";
+        })
+        setFilterAr({ ...filterAr, marketPlace: filteredArray, featured: featuredArray });
         // alert(props);
     }
     console.log(filterAr);
@@ -432,7 +446,7 @@ const Apps = ({ pageNum }) => {
                             <hr style={{ color: "grey" }} />
                             <div className={style1.appList1}>
                                 {
-                                    featuredApps.map((item, id) => {
+                                    filterAr.featured.map((item, id) => {
                                         return (
                                             <SingleApp key={id} app={item} />
                                         );
@@ -447,14 +461,18 @@ const Apps = ({ pageNum }) => {
                             <hr style={{ color: "grey" }} />
                             <div className={style1.appList1}>
                                 {
-                                    filterAr.map((item, id) => {
-                                        if (start <= (item.id) && (item.id) <=end) {
-                                            return (
-                                                <SingleApp key={id} app={item} />
-                                            );
-                                        }
-                                        else {
-                                            return " ";
+                                    filterAr.marketPlace.map((item, id) => {
+                                        if (filterAr.marketPlace.length >15) {
+                                            if (start <= (item.id) && (item.id) <= end) {
+                                                return (
+                                                    <SingleApp key={id} app={item} />
+                                                );
+                                            }
+                                            else {
+                                                return " ";
+                                            }
+                                        } else {
+                                            return (<SingleApp key={id} app={item} />);
                                         }
                                     })
                                 }
@@ -481,7 +499,7 @@ const Apps = ({ pageNum }) => {
 
                 </div>
                 <div className={style1.pagination}>
-                    <PaginationS appsArray={filterAr} />
+                    <PaginationS appsArray={filterAr.marketPlace} />
                 </div>
             </div>
         </>
