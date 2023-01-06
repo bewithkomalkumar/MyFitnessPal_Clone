@@ -395,16 +395,13 @@ const Apps = ({ pageNum }) => {
     let start = end - 14;
     // console.log(start + " -"+ end);
 
-    // onChange
-    const change = (e) => {
-        setSearch({ ...search, [e.target.name]: e.target.value });
-    }
-    // console.log(search)
 
     // filter
     const sideBar = ["All", "Activity Trackers", "Step Trackers", "Scales", "Lifestyle", "Wearables", "Fitness Apps", "Exercise Equipments", "Fertility"];
     const filteredArray = [];
     const featuredArray = [];
+    const typingArrayF = [];
+    const typingArrayM = [];
 
 
     const filter1 = (props) => {
@@ -430,6 +427,28 @@ const Apps = ({ pageNum }) => {
         // alert(props);
     }
     console.log(filterAr);
+
+    // onChange
+    const change = (e) => {
+        setSearch({ ...search, [e.target.name]: e.target.value });
+
+        sData.map((item,id) => {
+            if (item.title.toLowerCase().indexOf(search.text.toLowerCase()) !== -1) {
+                typingArrayM.push(item);
+            }
+            return "";
+        });
+        featuredApps.map((item, id) => {
+            if (item.title.toLowerCase().indexOf(search.text.toLowerCase()) !== -1) {
+                typingArrayF.push(item);
+            }
+            return "";
+        });
+        setFilterAr({ ...filterAr, marketPlace: typingArrayM, featured: typingArrayF });
+        console.log(search)
+    }
+    // console.log(search)
+
 
     return (
         <>
