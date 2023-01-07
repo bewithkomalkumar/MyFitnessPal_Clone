@@ -1,0 +1,17 @@
+.section {
+  margin: auto;
+}
+Th,
+Td {
+  text-align: start;
+}
+
+.reportBtn {
+  background-color: linear-gradient(
+    to right,
+    #0ba360,
+    #3cba92,
+    #30dd8a,
+    #2bb673
+  );
+}
