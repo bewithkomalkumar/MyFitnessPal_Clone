@@ -4,7 +4,15 @@ import AddFoodcss from "./AddBreakfastAndMeal.module.css";
 import TableHeading from "../../Components/TableHeading/TableHeading";
 import BreakFast from "../../Components/BreakFast/BreakFast";
 import TotalNutrients from "../../Components/TotalNutrients/TotalNutrients";
+import { useSelector } from "react-redux";
+import { MyStore } from "../../Redux/MyStore";
+
 function AddBreakfastAndMeal() {
+  const data = useSelector((MyStore) => {
+    return MyStore;
+  });
+  console.log(data);
+
   return (
     <div>
       <div className={AddFoodcss.upperAds}>
@@ -21,15 +29,23 @@ function AddBreakfastAndMeal() {
           <hr />
           <TableHeading />
 
-          <BreakFast name={"Breakfast"} />
+          <BreakFast name={"Breakfast"} data={data.Breakfast} />
           <p className={AddFoodcss.line}></p>
-          <BreakFast name={"Lunch"} />
+          <BreakFast name={"Lunch"} data={data.Lunch} />
           <p className={AddFoodcss.line}></p>
-          <BreakFast name={"Dinner"} />
+
+          <BreakFast name={"Dinner"} data={data.Dinner} />
           <p className={AddFoodcss.line}></p>
-          <BreakFast name={"Snacks"} />
+          <BreakFast name={"Snacks"} data={data.Snacks} />
           <p className={AddFoodcss.line}></p>
-          <TotalNutrients />
+          <TotalNutrients
+            data={[
+              ...data.Breakfast,
+              ...data.Dinner,
+              ...data.Lunch,
+              ...data.Snacks,
+            ]}
+          />
         </div>
 
         <div className={AddFoodcss.Ads}>

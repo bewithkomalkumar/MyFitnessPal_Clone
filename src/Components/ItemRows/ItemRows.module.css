@@ -5,6 +5,7 @@
   /* border: 1px solid red; */
   display: flex;
   align-items: center;
+
   justify-content: space-around;
 }
 .tablerow > p {
@@ -19,6 +20,8 @@
 .tablerow > button {
   background-color: red;
   border: none;
+  margin-bottom: 10px;
   border-radius: 50%;
   color: white;
+  cursor: pointer;
 }

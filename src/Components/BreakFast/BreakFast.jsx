@@ -4,27 +4,31 @@ import tablecss from "./BreakFast.module.css";
 import ItemRows from "../ItemRows/ItemRows";
 import tablecss1 from "../ItemRows/ItemRows.module.css";
 import RowforTotal from "../TotalNutrients/RowforTotal";
-function BreakFast(props) {
+
+function BreakFast({ name, data }) {
+  //console.log(name, data);
   return (
     <div className={tablecss.box}>
-      <h2>{props.name}</h2>
+      <h2>{name}</h2>
       <div>
         {/* maping my item rows here */}
-        <div className={tablecss.sss}>
-          <p>eggs</p>
-          <ItemRows text={"-"} />
-        </div>
-        <div className={tablecss.sss}>
-          <p>eggs</p>
-          <ItemRows text={"-"} />
-        </div>
+        {data.map((elem) => {
+          return (
+            <div className={tablecss.sss} key={elem.id}>
+              <p>{elem.name}</p>
+              <ItemRows data={elem} name={name} />
+            </div>
+          );
+        })}
+
         <div>
           <div className={tablecss.AddFood}>
             <div>
-              <Link to={"/fooditems"}>Add Food</Link> | <Link>Quick Tools</Link>
+              <Link to={`/fooditems/${name}`}>Add Food</Link> |{" "}
+              <Link>Quick Tools</Link>
             </div>
 
-            <RowforTotal />
+            <RowforTotal data={data} name={name} />
           </div>
         </div>
       </div>
