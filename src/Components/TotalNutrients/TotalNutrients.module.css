@@ -1,0 +1,20 @@
+.Total {
+  margin-top: 80px;
+  font-weight: 700;
+  height: 150px;
+}
+.Total > div {
+  display: flex;
+  /* border: 1px solid red; */
+  height: 20px;
+  float: right;
+  align-items: center;
+}
+.Total > div > p {
+}
+.tableHeading {
+  margin-top: 25px;
+}
+.greenColor {
+  color: #197910;
+}

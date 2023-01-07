@@ -31,6 +31,11 @@ function TableHeading() {
               <br />
               <span>g</span>
             </th>
+            <th style={{ backgroundColor: "white" }}>
+              Edit
+              <br />
+              <span></span>
+            </th>
           </tr>
         </thead>
       </table>

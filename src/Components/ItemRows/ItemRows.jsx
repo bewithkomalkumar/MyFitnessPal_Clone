@@ -1,6 +1,6 @@
 import React from "react";
-import tablecss from "../BreakFast/BreakFast.module.css";
-function ItemRows() {
+import tablecss from "./ItemRows.module.css";
+function ItemRows(props) {
   return (
     <div className={tablecss.tablerow}>
       <p>10</p>
@@ -9,6 +9,7 @@ function ItemRows() {
       <p>01</p>
       <p>01</p>
       <p>12</p>
+      <button>-</button>
     </div>
   );
 }
