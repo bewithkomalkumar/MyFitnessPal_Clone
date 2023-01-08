@@ -1,48 +1,4 @@
-/* PremiumNavbar */
 
-.PremiumNavbar {
-	width: 100vw;
-	margin-top: 15px;
-}
-
-.PremiumNavbar img {
-	cursor: pointer;
-	width: 200px;
-}
-
-.loginSignupButtons {
-	display: flex;
-}
-
-.navBarTop {
-	display: flex;
-	justify-content: space-between;
-	width: 70%;
-	margin: auto;
-}
-
-.navBarBottom {
-	margin-top: 15px;
-	display: flex;
-	gap: 30px;
-	width: 100vw;
-	padding: 10px;
-	background-color: #0066ee;
-	color: white;
-	overflow: hidden;
-	align-items: center;
-	justify-content: flex-start;
-}
-
-.navBarBottom div {
-	cursor: pointer;
-	font-weight: bold;
-	font-size: 14px;
-}
-
-.navBarBottom div:nth-of-type(1) {
-	margin-left: 200px;
-}
 
 /* ******************************************* */
 
@@ -72,6 +28,7 @@
 	margin-left: 150px;
 	/* align-items: center;
     justify-content: center; */
+	
 }
 
 .TopSecRight {
