@@ -3,15 +3,19 @@ import "./App.css";
 import TopSection from "./Components/premium/TopSection";
 import OptionsGrid from "./Components/premium/Optionsgrid";
 import YourGoalsSection from "./Components/premium/YourGoalsSection";
+import VictoryStories from "./Components/premium/VictoryStories";
+import FrequentlyAskedQuestions from "./Components/premium/FrequentlyAskedQuestions";
 
 
 function App() {
   return (
     <div className="App">
-      <h1>MyFitnesspal </h1>
+      
       <TopSection/>
       <OptionsGrid/>
       <YourGoalsSection/>
+      <VictoryStories/>
+      <FrequentlyAskedQuestions/>
      
     </div>
   );
