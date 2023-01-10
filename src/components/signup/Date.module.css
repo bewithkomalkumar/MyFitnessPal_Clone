@@ -1,0 +1,56 @@
+input[type="date"]::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
+  }
+  input[type="date"]::-webkit-datetime-edit-month-field {
+    -webkit-appearance: none;
+    display: none;
+  }
+  input[type="date"]::-webkit-datetime-edit-day-field {
+    -webkit-appearance: none;
+    display: none;
+  }
+  input[type="date"]::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none;
+    display: none;
+  }
+  input[type="date"] {
+    border: none;
+    width: 30px;
+    font-size: 30px;
+  }
+  .Date {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+  }
+  .Date > p {
+    color: #0b5680;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .Date > div {
+    display: flex;
+    gap: 2px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 5px;
+  }
+  .Date > div p {
+    background-color: #ffffff00;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .larrow {
+    border-radius: 10px 0 0 10px;
+  }
+  .rarrow {
+    border-radius: 0 10px 10px 0;
+  }
+  .maindate {
+    text-align: center;
+    width: 200px;
+  }
+  

@@ -1,0 +1,46 @@
+.Pay1{
+    width: 40%;
+    margin: auto;
+    padding:20px 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.Box1 > input{
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+.Box2{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+.btn{
+    display: flex;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 22%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    font-weight: 600;
+    color: gray;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}
+a:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,941 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+.navdiv {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  /* position:fixed; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  font-weight: 700;
+}
+.navlogoss {
+  width: 40px;
+  font-size: 30px;
+  color: blue;
+  padding: 9px;
+  cursor: pointer;
+  display: flex;
+}
+.navlogin {
+  margin-top: 20px;
+}
+
+@media all and (min-width: 819px) and (max-width: 1181px) {
+  .navdiv {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* position:fixed; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  }
+
+  .navlogo {
+    width: 40px;
+    font-size: 25px;
+    color: blue;
+    margin-top: -0.1px;
+    padding: 6px;
+    cursor: pointer;
+    margin-left: -60px;
+  }
+  .navlogin {
+    margin-top: 12px;
+  }
+}
+
+@media all and (min-width: 358px) and (max-width: 742px) {
+  .navdiv {
+    height: 50px;
+    width: 140%;
+    display: flex;
+    justify-content: space-around;
+    /* position:fixed; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  }
+
+  .navlogo {
+    width: 40px;
+    font-size: 25px;
+    color: blue;
+    margin-top: -0.1px;
+    padding: 6px;
+    cursor: pointer;
+    margin-left: -60px;
+  }
+  .navlogin {
+    margin-top: 12px;
+  }
+}
+
+/* good health div start here */
+
+.goodhealthdiv {
+  height: 450px;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  /* font-family: 'Inter', sans-serif; */
+}
+.gooddiv2 {
+  height: 100%;
+  width: 45%;
+}
+
+.goodimgdiv {
+  height: 100%;
+  width: 50%;
+}
+.goodimg {
+  width: 100%;
+}
+
+.goodh1 {
+  font-size: 55px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.goodbutton {
+  width: 80%;
+  height: 60px;
+  font-size: larger;
+  color: white;
+  font-weight: bolder;
+  background-color: blue;
+  border: none;
+  border-radius: 7px;
+  margin-top: 50px;
+}
+
+@media all and (min-width: 819px) and (max-width: 1181px) {
+  .goodhealthdiv {
+    height: 1200px;
+    width: 60%;
+    margin: auto;
+    display: block;
+    margin-top: 80px;
+  }
+
+  .gooddiv2 {
+    height: 50%;
+    width: 100%;
+  }
+
+  .goodimgdiv {
+    height: 50%;
+    width: 100%;
+    margin-top: -60px;
+  }
+  .goodimg {
+    width: 100%;
+  }
+
+  .goodh1 {
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  .goodp11 {
+    text-align: center;
+  }
+  .goodbutton {
+    width: 80%;
+    height: 60px;
+    font-size: larger;
+    color: white;
+    font-weight: bolder;
+    background-color: blue;
+    border: none;
+    border-radius: 7px;
+    margin-left: 10%;
+    margin-top: 20px;
+  }
+}
+
+@media all and (min-width: 358px) and (max-width: 742px) {
+  .goodhealthdiv {
+    height: 1200px;
+    width: 135%;
+    margin: auto;
+    display: block;
+    margin-top: 80px;
+  }
+
+  .gooddiv2 {
+    height: 50%;
+    width: 100%;
+  }
+
+  .goodimgdiv {
+    height: 50%;
+    width: 100%;
+    margin-top: -60px;
+  }
+  .goodimg {
+    width: 100%;
+  }
+
+  .goodh1 {
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  .goodp11 {
+    text-align: center;
+  }
+  .goodbutton {
+    width: 80%;
+    height: 60px;
+    font-size: larger;
+    color: white;
+    font-weight: bolder;
+    background-color: blue;
+    border: none;
+    border-radius: 7px;
+    margin-left: 10%;
+    margin-top: 20px;
+  }
+}
+
+/* LOG FROM START HERE */
+.logdiv {
+  height: 400px;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.logimgdiv {
+  height: 100%;
+  width: 50%;
+}
+.logimg {
+  height: 100%;
+  width: 100%;
+}
+
+.logdiv2 {
+  height: 80%;
+  width: 47%;
+  margin-top: 40px;
+}
+.logh1 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+.p1 {
+  font-size: 17px;
+  margin-top: -10px;
+  text-align: center;
+}
+@media all and (min-width: 819px) and (max-width: 1181px) {
+  .logdiv {
+    height: 700px;
+    width: 60%;
+    margin: auto;
+    display: block;
+    margin-top: 80px;
+  }
+  .logimgdiv {
+    height: 60%;
+    width: 100%;
+  }
+  .logimg {
+    width: 100%;
+  }
+
+  .logdiv2 {
+    height: 40%;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .logh1 {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .p1 {
+    font-size: 17px;
+    margin-top: -10px;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 358px) and (max-width: 742px) {
+  .logdiv {
+    height: 700px;
+    width: 135%;
+    margin: auto;
+    display: block;
+    margin-top: 80px;
+  }
+  .logimgdiv {
+    height: 60%;
+    width: 100%;
+  }
+  .logimg {
+    width: 100%;
+  }
+
+  .logdiv2 {
+    height: 40%;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .logh1 {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .p1 {
+    font-size: 17px;
+    margin-top: -10px;
+    text-align: center;
+  }
+}
+
+/*  THE TOOLS START HERE CSS */
+
+.toolsdiv {
+  height: 150px;
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+}
+.toolsh1 {
+  font-size: 50px;
+  font-weight: bolder;
+  margin-left: 15%;
+  margin-top: -10px;
+}
+.toolsp1 {
+  margin-inline-start: 20%;
+  margin-inline-end: 12%;
+  text-align: center;
+}
+
+.toolsgriddiv {
+  height: 320px;
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.toolsimgdiv {
+  height: 40%;
+  width: 70%;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1%;
+}
+.toolsimg {
+  height: 70%;
+  width: 70%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.toolsh4 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 20px;
+}
+.toolsgridp1 {
+  margin-inline-start: 20px;
+  margin-inline-end: 15px;
+  text-align: center;
+}
+
+@media all and (min-width: 819px) and (max-width: 1181px) {
+  .toolsdiv {
+    height: 150px;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+  }
+  .toolsh1 {
+    font-size: 40px;
+    font-weight: bolder;
+
+    margin-top: -10px;
+  }
+  .toolsp1 {
+    margin-top: -20px;
+    margin-inline-start: 10%;
+    margin-inline-end: 12%;
+  }
+
+  .toolsgriddiv {
+    height: 320px;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .toolsimgdiv {
+    height: 30%;
+    width: 70%;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1%;
+  }
+  .toolsimg {
+    height: 60%;
+    width: 70%;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .toolsh4 {
+    font-size: 17px;
+    font-weight: bolder;
+  }
+  .toolsgridp1 {
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 358px) and (max-width: 742px) {
+  .toolsdiv {
+    height: 150px;
+    width: 135%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .toolsh1 {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .toolsp1 {
+    margin-top: -10px;
+    margin-inline-start: 10%;
+    margin-inline-end: 12%;
+  }
+
+  .toolsgriddiv {
+    height: 1200px;
+    width: 135%;
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    gap: 20px;
+  }
+  .toolsgrid1 {
+    margin-top: 60px;
+  }
+  .toolsimgdiv {
+    height: 50%;
+    width: 40%;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1%;
+  }
+  .toolsimg {
+    height: 100%;
+    width: 50%;
+    /* margin-left: 30px;
+    margin-top: 10px; */
+    margin: auto;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .toolsh4 {
+    font-size: 23px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .toolsgridp1 {
+    text-align: center;
+    font-size: 23px;
+  }
+}
+
+/* VICTORY STORIES */
+
+.vicdiv {
+  height: 150px;
+  width: 40%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.vich1 {
+  font-size: 40px;
+  margin-left: 20%;
+  font-weight: bolder;
+}
+.vicp1 {
+  margin-top: 10px;
+  margin-left: 14%;
+  margin-inline-end: 10%;
+  text-align: center;
+}
+
+.photo {
+  height: 500px;
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  height: 100%;
+  width: 10%;
+  padding: 20px;
+}
+.vicimgdiv {
+  margin: 16px;
+  height: 80%;
+  width: 140%;
+  margin-top: 40px;
+}
+.vicimg {
+  height: 100%;
+  width: 100%;
+}
+
+.vicimgside {
+  height: 100%;
+  width: 100%;
+}
+.vicbutton {
+  color: white;
+  background-color: rgb(63, 63, 220);
+  border: none;
+  border-radius: 5px;
+  height: 60px;
+  width: 25%;
+  font-size: 15px;
+  font-weight: bolder;
+  margin-left: 40%;
+  margin-top: 40px;
+}
+.viccarddiv {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.viccardh1 {
+  margin-top: 30px;
+  font-size: 30px;
+}
+.viccardp1 {
+  font-size: 20px;
+}
+
+@media all and (min-width: 819px) and (max-width: 1181px) {
+  .vicdiv {
+    height: 150px;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  .vich1 {
+    font-size: 40px;
+    margin-left: 30%;
+    font-weight: bolder;
+  }
+  .vicp1 {
+    margin-left: 9%;
+    margin-inline-end: 6%;
+    text-align: center;
+  }
+
+  .photo {
+    height: 450px;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 6%;
+    padding: 20px;
+  }
+  .vicimgdiv {
+    margin: 16px;
+    height: 80%;
+    width: 170%;
+    margin-top: 40px;
+  }
+  .vicimg {
+    height: 100%;
+    width: 100%;
+  }
+
+  .vicimgside {
+    height: 100%;
+    width: 100%;
+  }
+  .vicbutton {
+    color: white;
+    background-color: rgb(63, 63, 220);
+    border: none;
+    border-radius: 5px;
+    height: 60px;
+    width: 40%;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 30%;
+    margin-top: 40px;
+  }
+  .viccarddiv {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1%;
+  }
+
+  .viccardh1 {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+  .viccardp1 {
+    font-size: 20px;
+  }
+}
+
+@media all and (min-width: 358px) and (max-width: 742px) {
+  .vicdiv {
+    height: 150px;
+    width: 135%;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  .vich1 {
+    font-size: 40px;
+    margin-left: 16%;
+    font-weight: bolder;
+  }
+  .vicp1 {
+    margin-left: 3%;
+    margin-inline-end: 6%;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .photo {
+    height: 450px;
+    width: 135%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 10px; */
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 6%;
+    padding: 20px;
+  }
+  .vicimgdiv {
+    margin: 16px;
+    height: 80%;
+    width: 280%;
+    margin-top: 40px
+  }
+  .vicimg {
+    height: 100%;
+    width: 100%;
+  }
+
+  .vicimgside {
+    height: 100%;
+    width: 100%;
+  }
+  .vicbutton {
+    color: white;
+    background-color: rgb(63, 63, 220);
+    border: none;
+    border-radius: 5px;
+    height: 60px;
+    width: 80%;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 25%;
+    margin-top: 40px;
+  }
+  .viccarddiv {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1%;
+  }
+
+  .viccardh1 {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+  .viccardp1 {
+    font-size: 20px;
+  }
+}
+
+/* RECIPES & INSPIRATION */
+
+.recipediv {
+  height: 150px;
+  width: 40%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.recipeh1 {
+  font-size: 50px;
+  font-weight: bolder;
+  margin-left: 30px;
+}
+.recipep1 {
+  margin-left: 20px;
+  width: 90%;
+  text-align: center;
+}
+
+.blogdiv {
+  height: 290px;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  margin-top: 40px;
+}
+
+.blogdiv2 {
+  height: 100%;
+  width: 90%;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.blogimgdiv {
+  height: 60%;
+  width: 100%;
+  border-radius: 7px;
+}
+.blogimg {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+}
+.blogimgh4 {
+  margin-top: 20px;
+  margin-inline-start: 10px;
+  font-weight: bolder;
+  font-size: 17px;
+}
+.blogimgh42 {
+  margin-inline-start: 10px;
+  color: blue;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+@media all and (min-width: 819px) and (max-width: 1181px) {
+  .recipediv {
+    height: 170px;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  .recipeh1 {
+    font-size: 40px;
+    font-weight: bolder;
+    margin-left: 30px;
+    text-align: center;
+  }
+  .recipep1 {
+    font-size: large;
+    margin-top: -20px;
+    margin-left: 50px;
+    margin-inline-end: 30px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .blogdiv {
+    height: 320px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 358px) and (max-width: 742px) {
+  .recipediv {
+    height: 170px;
+    width: 135%;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  .recipeh1 {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 14px;
+    text-align: center;
+  }
+  .recipep1 {
+    font-size: large;
+    margin-top: -20px;
+    margin-left: 20px;
+    margin-inline-end: 30px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .blogdiv {
+    height: 1220px;
+    width: 135%;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .blogdiv2 {
+    height: 30%;
+    width: 90%;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    margin: auto;
+    margin-bottom: 60px;
+  }
+
+  .blogimgdiv {
+    height: 60%;
+    width: 100%;
+    border-radius: 7px;
+  }
+  .blogimg {
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+  }
+  .blogimgh4 {
+    margin-inline-start: 10px;
+    font-weight: bolder;
+    font-size: 23px;
+  }
+  .blogimgh42 {
+    margin-inline-start: 10px;
+    color: blue;
+    font-size: 23px;
+    margin-top: -10px;
+  }
+}
+
+/* CONNECT WITH OVER 50 APPS ****************************************************/
+.connectdiv {
+  height: 250px;
+  width: 30%;
+  margin: auto;
+  margin-top: 80px;
+}
+.connecth1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+}
+.connectp1 {
+  text-align: center;
+  width: 110%;
+  margin-inline-start: -20px;
+  font-size: 16px;
+}
+
+.connectimg {
+  height: 500px;
+  width: 50%;
+  margin-left: 26%;
+}
+.connectimgp1 {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 60px;
+  font-size: 12px;
+}
+
+@media all and (min-width: 819px) and (max-width: 1181px) {
+  .connectdiv {
+    height: 250px;
+    width: 70%;
+    margin: auto;
+    margin-top: 80px;
+  }
+  .connecth1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-left: 15%;
+    margin-inline-end: 6%;
+  }
+
+  .connectimg {
+    height: 500px;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .connectimgp1 {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 12px;
+  }
+}
+
+@media all and (min-width: 358px) and (max-width: 742px) {
+  .connectdiv {
+    height: 250px;
+    width: 130%;
+    margin: auto;
+    margin-top: 80px;
+    margin-left: 10px;
+  }
+  .connecth1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-left: 10%;
+    margin-inline-end: 6%;
+  }
+
+  .connectimg {
+    height: 500px;
+    width: 130%;
+    margin-left: 7%;
+  }
+  .connectimgp1 {
+    text-align: center;
+    width: 130%;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+}

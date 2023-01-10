@@ -1,0 +1,17 @@
+.SingleItem {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  /* border: 1px solid blue; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.SingleItem > h2 {
+  margin-left: 20px;
+  color: #0088d6;
+}
+.SingleItem > p {
+  margin: 0;
+  margin-left: 20px;
+  font-size: 20px;
+}

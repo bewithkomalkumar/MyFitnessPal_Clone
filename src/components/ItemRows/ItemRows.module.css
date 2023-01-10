@@ -1,0 +1,31 @@
+.tablerow {
+  width: 420px;
+
+  float: right;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+
+  justify-content: space-around;
+}
+.tablerow > p {
+}
+.pwithbtn {
+  display: flex;
+}
+.pwithbtn > button {
+  position: relative;
+  left: 20px;
+}
+.tablerow > button {
+  display: flex;
+  background-color: red;
+  border: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
