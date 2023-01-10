@@ -2,6 +2,7 @@
 import Paymentcss from "./Payment.module.css"
 import { Box, Button, flexbox, Text } from "@chakra-ui/react";
 import React from "react"; 
+import { NavLink } from "react-router-dom";
 
 function Payment () {
     function premium(){
@@ -46,7 +47,7 @@ function Payment () {
                 <li>If I do not cancel my subscription during the free trial or promotional period, I will be billed the regular subscription rate (as indicated above) immediately upon the end of my free trial or promotional period.</li>
                 <li>My subscription will automatically renew for the same duration and cost (subject to change) until I cancel it.</li>
             </ul>
-            <a href="/home"><button onClick={premium} className={Paymentcss.btn}>START ENOYING PREMIUM  ></button></a>
+            <NavLink className={Paymentcss.sonu} to="/home"><button onClick={premium} className={Paymentcss.btn}>START ENOYING PREMIUM  ></button></NavLink>
             
         </div>
     )
