@@ -22,7 +22,7 @@ const Signup4 = () => {
   const toast = useToast();
 
   const submitHandler = () => {
-    if (signup.gender && signup.dob && signup.country) {
+    if (signup.gender && signup.country) {
       navigate("/signup5");
     } else {
       toast({
