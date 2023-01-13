@@ -1,4 +1,50 @@
-# Getting Started with Create React App
+# MyFitnessPal Website's Clone
+> MyFitness pal is an fitness app that helps you to manage your diet plans for loose or gain weight according to the current health status of your body.
+* Its an Collaborative project build by 4 developers, in just 5 days. <a href="https://myfitnesspal1.netlify.app/">Live Demo</a>
+
+## Features-
+* User have to login or create thier account to use all features.
+* Manage your daily diet by just simply add you all meals that you have in your whole day to the food section.
+* User can buy premium diet plans from premium section to avail all benifits.
+* payment feature is also there.
+
+## Tech-Stack
+> React, Redux, JavaScript, Render-Api, Chakra-UI, Material-UI, HTML, CSS
+
+
+# Website Demo:
+
+## Landing page
+![image](https://user-images.githubusercontent.com/81805096/212323795-8b285853-ceb6-41bb-9f2c-c9fab8491831.png)
+
+## Log-in / Sign-up
+![image](https://user-images.githubusercontent.com/81805096/212324003-5907ba98-1667-44ab-8b24-8e6674f54b19.png)
+
+## Home Page
+![image](https://user-images.githubusercontent.com/81805096/212324070-0139e13d-6817-44c2-9a31-0ac337e17ada.png)
+
+## Food Section
+![image](https://user-images.githubusercontent.com/81805096/212324325-20ea7ee3-27b9-40bf-a102-8977d2e59fc0.png)
+![image](https://user-images.githubusercontent.com/81805096/212324413-7242fa8b-f61b-499f-9a4d-f40678c3aa28.png)
+
+## Explore Apps
+![image](https://user-images.githubusercontent.com/81805096/212324611-b15f8764-6796-49e7-92e5-d169dfc8ca9e.png)
+
+## Premium Section
+![image](https://user-images.githubusercontent.com/81805096/212324723-fba2f9c5-6ddc-40df-9467-a24947054dcb.png)
+![image](https://user-images.githubusercontent.com/81805096/212324795-d791197d-cd58-4fd4-803d-23a3e5930fc5.png)
+![image](https://user-images.githubusercontent.com/81805096/212324961-31669c0e-23cd-4341-b29e-5c7e229c1524.png)
+![image](https://user-images.githubusercontent.com/81805096/212325028-6f355d15-a8e6-4a3a-8e77-d63609e131ed.png)
+
+## Payment page
+![image](https://user-images.githubusercontent.com/81805096/212325174-7c3f6187-f5fc-4dfe-98f6-01891da4f847.png)
+
+![image](https://user-images.githubusercontent.com/81805096/212325266-23759d4a-3fbc-4a9f-88e1-98b717dceb51.png)
+
+
+
+# How to Install
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
