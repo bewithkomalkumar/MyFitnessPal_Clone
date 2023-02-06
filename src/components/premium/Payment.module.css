@@ -38,9 +38,9 @@
     background-color: blue;
     color: white;
 }
-a:hover{
+.sonu:hover{
     cursor: pointer;
 }
-a{
+.sonu{
     text-decoration: none;
 }
