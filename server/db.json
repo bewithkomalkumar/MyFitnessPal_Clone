@@ -1,0 +1,121 @@
+{
+  "Meals": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "Calories": 104,
+      "Carbs": 28,
+      "Fat": 0,
+      "Protein": 1,
+      "Sodium": 2,
+      "Sugar": 21
+    },
+    {
+      "id": 2,
+      "name": "Banana Milk Shake",
+      "Calories": 307,
+      "Carbs": 50,
+      "Fat": 0,
+      "Protein": 5,
+      "Sodium": 0,
+      "Sugar": 0
+    },
+    {
+      "id": 3,
+      "name": "Idli",
+      "Calories": 232,
+      "Carbs": 48,
+      "Fat": 2,
+      "Protein": 12,
+      "Sodium": 302,
+      "Sugar": 21
+    },
+    {
+      "id": 4,
+      "name": "Moong Dal",
+      "Calories": 100,
+      "Carbs": 26,
+      "Fat": 3,
+      "Protein": 10,
+      "Sodium": 30,
+      "Sugar": 0
+    },
+    {
+      "id": 5,
+      "name": "Chapati",
+      "Calories": 120,
+      "Carbs": 20,
+      "Fat": 3,
+      "Protein": 4,
+      "Sodium": 190,
+      "Sugar": 0
+    },
+    {
+      "id": 6,
+      "name": "Paneer",
+      "Calories": 100,
+      "Carbs": 0,
+      "Fat": 8,
+      "Protein": 6,
+      "Sodium": 10,
+      "Sugar": 0
+    },
+    {
+      "id": 7,
+      "name": "Egg",
+      "Calories": 70,
+      "Carbs": 1,
+      "Fat": 5,
+      "Protein": 6,
+      "Sodium": 0,
+      "Sugar": 0
+    },
+    {
+      "id": 8,
+      "name": "Chicken",
+      "Calories": 100,
+      "Carbs": 1,
+      "Fat": 2,
+      "Protein": 22,
+      "Sodium": 110,
+      "Sugar": 1
+    },
+    {
+      "id": 9,
+      "name": "Chips",
+      "Calories": 120,
+      "Carbs": 22,
+      "Fat": 3,
+      "Protein": 2,
+      "Sodium": 0,
+      "Sugar": 2
+    },
+    {
+      "id": 10,
+      "name": "Halwa",
+      "Calories": 189,
+      "Carbs": 34,
+      "Fat": 5,
+      "Protein": 3,
+      "Sodium": 120,
+      "Sugar": 21
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

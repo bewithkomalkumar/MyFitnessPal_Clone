@@ -1,0 +1,23 @@
+{
+  "name": "fooditemapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bewithkomalkumar/fooditemApi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bewithkomalkumar/fooditemApi/issues"
+  },
+  "homepage": "https://github.com/bewithkomalkumar/fooditemApi#readme",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
+}
